@@ -27,6 +27,7 @@ class Search extends Component {
       loading: PropTypes.bool
     }).isRequired
   };
+  s;
 
   constructor(props) {
     super(props);
@@ -56,7 +57,7 @@ class Search extends Component {
             placeholderTextColor="#666"
             underlineColorAndroid="transparent"
             value={this.state.searchInput}
-            onChange={this.search}
+            onChangeText={this.search}
           />
         </View>
 
