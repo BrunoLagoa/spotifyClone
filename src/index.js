@@ -1,15 +1,18 @@
-import React, { Component } from "react";
+import React, { Fragment } from "react";
 import { Provider } from "react-redux";
-import { View, SafeAreaView } from "react-native";
 
 import "./config/ReactotronConfig";
 import store from "./store";
+import Routes from "./routes";
+
+import Player from "./components/Player";
 
 const App = () => (
   <Provider store={store}>
-    <SafeAreaView>
-      <View />
-    </SafeAreaView>
+    <Fragment>
+      <Routes />
+      <Player />
+    </Fragment>
   </Provider>
 );
 
